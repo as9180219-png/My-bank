@@ -1,0 +1,49 @@
+‎/* card3d.css */
+‎.card-container {
+‎  perspective: 1000px;
+‎  display: flex;
+‎  justify-content: center;
+‎  align-items: center;
+‎  height: 50vh;
+‎  margin-top: 20px;
+‎}
+‎
+‎.card {
+‎  width: 320px;
+‎  height: 200px;
+‎  position: relative;
+‎  transform-style: preserve-3d;
+‎  transition: transform 1s;
+‎  cursor: pointer;
+‎}
+‎
+‎.card .front, .card .back {
+‎  position: absolute;
+‎  width: 100%;
+‎  height: 100%;
+‎  border-radius: 15px;
+‎  backface-visibility: hidden;
+‎  color: white;
+‎  padding: 20px;
+‎  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+‎  display: flex;
+‎  flex-direction: column;
+‎  justify-content: space-between;
+‎}
+‎
+‎.card .front { background: linear-gradient(135deg, #28c728, #0a183d); }
+‎.card .back { background: linear-gradient(135deg, #1c1c1c, #333333); transform: rotateY(180deg); }
+‎
+‎@keyframes rotateCard {
+‎  0% { transform: rotateY(0deg); }
+‎  50% { transform: rotateY(180deg); }
+‎  100% { transform: rotateY(360deg); }
+‎}
+‎
+‎.card.auto-rotate { animation: rotateCard 10s infinite linear; }
+‎
+‎.card-logo { font-size: 24px; }
+‎.card-number { font-size: 20px; letter-spacing: 2px; }
+‎.card-name, .card-expiration, .cvv { font-size: 16px; }
+‎.magnetic-strip { height: 40px; background: black; margin-top: 20px; border-radius: 4px; }
+‎
