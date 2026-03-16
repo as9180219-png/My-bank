@@ -1,0 +1,126 @@
+‎<!-- dashboard.html -->
+‎<!DOCTYPE html>
+‎<html lang="fr">
+‎<head>
+‎<meta charset="UTF-8">
+‎<title>Dashboard </title>
+‎<link rel="stylesheet" href="css/style.css">
+‎<link rel="stylesheet" href="css/card3d.css">
+‎</head>
+‎<body>
+‎<div id="dashboard">
+‎    <h1>Solde total: <span id="solde">12 960 758 €</span> <button id="toggleSolde">Voir / Cacher</button></h1>
+‎
+‎    <div>
+‎        <h2>Compte Épargne: 570 8686 €</h2>
+‎        <h2>Compte Courant: 310 867 €</h2>
+‎    </div>
+‎
+‎    <!-- Menu Slider -->
+‎    <nav>
+‎        <ul>
+‎            <li onclick="openSection('transactions')">Historique Transactions</li>
+‎            <li onclick="openSection('depot')">Dépôt / Retrait</li>
+‎            <li onclick="openSection('graph')">Graphique Dépenses</li>
+‎            <li onclick="openSection('plafon')">Plafonnement</li>
+‎            <li onclick="openSection('service')">Service Client</li>
+‎            <li onclick="openSection('settings')">Paramètres du compte</li>
+‎            <li onclick="logout()">Déconnexion</li>
+‎        </ul>
+‎    </nav>
+‎
+‎    <!-- Sections -->
+‎    <section id="transactions" class="hidden">
+‎        <h3>Historique des transactions</h3>
+‎        <p>Transactions récentes…</p>
+‎    </section>
+‎
+‎    <section id="settings" class="page-section hidden">
+‎      <h3>Paramètres du compte</h3>
+‎
+‎      <!-- Informations personnelles -->
+‎      <div class="setting-group">
+‎        <h4>Informations personnelles</h4>
+‎        <p>Nom : Jean Jacque Berthelot</p>
+‎        <p>Email : jeanjacquebmB2026@gmail.com</p>
+‎        <p>Téléphone : +225 01 23 45 67 89</p>
+‎        <p>Adresse : Abidjan, Côte d'Ivoire</p>
+‎      </div>
+‎
+‎      <!-- Sécurité -->
+‎      <div class="setting-group">
+‎        <h4>Sécurité</h4>
+‎        <button onclick="changerMotDePasse()">Changer mot de passe</button>
+‎        <button onclick="changerPIN()">Changer code PIN</button>
+‎        <label>
+‎          Notifications actives
+‎          <input type="checkbox" checked>
+‎        </label>
+‎      </div>
+‎
+‎      <!-- Préférences -->
+‎      <div class="setting-group">
+‎        <h4>Préférences</h4>
+‎        <label>
+‎          Affichage solde par défaut
+‎          <input type="checkbox" checked>
+‎        </label>
+‎        <label>
+‎          Thème sombre
+‎          <input type="checkbox">
+‎        </label>
+‎        <label>
+‎          Langue :
+‎          <select>
+‎            <option>Français</option>
+‎            <option>Anglais</option>
+‎          </select>
+‎        </label>
+‎      </div>
+‎
+‎      <!-- Cartes bancaires -->
+‎      <div class="setting-group">
+‎        <h4>Cartes bancaires</h4>
+‎        <button onclick="ajouterCarte()">Ajouter une carte</button>
+‎        <button onclick="supprimerCarte()">Supprimer une carte</button>
+‎      </div>
+‎
+‎      <!-- Comptes secondaires -->
+‎      <div class="setting-group">
+‎        <h4>Comptes secondaires</h4>
+‎        <button onclick="ajouterCompte()">Ajouter un compte</button>
+‎        <button onclick="supprimerCompte()">Supprimer un compte secondaire</button>
+‎      </div>
+‎
+‎      <!-- Support / Déconnexion -->
+‎      <div class="setting-group">
+‎        <h4>Support</h4>
+‎        <button onclick="contacterSupport()">Contacter le service client</button>
+‎        <button onclick="logout()">Déconnexion</button>
+‎      </div>
+‎    </section>
+‎
+‎    <!-- Carte bancaire 3D -->
+‎    <div class="card-container">
+‎        <div class="card" id="card">
+‎            <!-- Recto -->
+‎            <div class="front">
+‎                <div class="card-logo">🏦</div>
+‎                <div class="card-number">1234 5678 9012 3456</div>
+‎                <div class="card-name">Jean Jacque Berthelot</div>
+‎                <div class="card-expiration">12/26</div>
+‎            </div>
+‎            <!-- Verso -->
+‎            <div class="back">
+‎                <div class="magnetic-strip"></div>
+‎                <div class="cvv">CVV: 123</div>
+‎            </div>
+‎        </div>
+‎    </div>
+‎</div>
+‎
+‎<script src="js/dashboard.js"></script>
+‎<script src="js/card3d.js"></script>
+‎</body>
+‎</html>
+‎
