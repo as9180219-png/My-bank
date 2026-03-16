@@ -1,0 +1,33 @@
+‎<!-- index.html -->
+‎<!DOCTYPE html>
+‎<html lang="fr">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <title>BNP parisbas- Connexion</title>
+‎    <link rel="stylesheet" href="css/style.css">
+‎</head>
+‎<body>
+‎
+‎<!-- LOADER -->
+‎<div id="loader">
+‎    <img src="images/loading-logo.png" alt="Logo" class="loader-logo">
+‎    <div class="loader-text">Chargement…</div>
+‎    <div class="loader-circle"></div>
+‎</div>
+‎
+‎<!-- CONNEXION -->
+‎<div id="loginPage" class="login-page hidden">
+‎    <h2>Connexion</h2>
+‎    <input type="email" id="email" placeholder="Email">
+‎    <input type="password" id="password" placeholder="Mot de passe">
+‎    <input type="text" id="pin" placeholder="Code PIN (facultatif)">
+‎    <button id="loginBtn">Connexion</button>
+‎    <p>ou</p>
+‎    <button id="createAccountBtn">Créer un compte</button>
+‎</div>
+‎
+‎<script src="js/login.js"></script>
+‎<script src="js/loader.js"></script>
+‎</body>
+‎</html>
+‎
